@@ -1,0 +1,16 @@
+# faca um programa que leia um numero inteiro e diga se ele e ou nao um numero primo
+
+n = int(input('digite um numero: '))
+tot = 0
+for c in range (1, n +1):
+    if n % c == 0:
+        print('\033[33m', end='')
+        tot += 1
+    else:
+        print('\033[31m', end='')
+    print('{}'.format(c), end='')
+print('\n\033[m o numero {} foi divisivel {} vezes'.format(n, tot))
+if tot == 2:
+    print('e por isso ele e primo')
+else:
+    print('e por isso ele nao e primo')
